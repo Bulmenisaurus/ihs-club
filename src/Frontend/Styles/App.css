@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    height: 50px;
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding: 10px;
+}
+
+button {
+    background: none;
+    font: inherit;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+textarea {
+    display: block;
+}
+
+iframe {
+    border: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+input {
+    display: block;
+}
+#clubs {
+    display: grid;
+    gap: 10px;
+    /* https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/ */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin: 10px 0;
+}
+
+div.club {
+    border: 1px solid black;
+    padding: 10px;
+}
