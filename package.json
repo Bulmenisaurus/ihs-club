@@ -2,7 +2,6 @@
   "name": "ihs-club",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:client": "parcel ./src/Frontend/index.html",
@@ -10,7 +9,7 @@
     "start": "npm run start:client & npm run start:server",
     "build": "tsc --p src/Backend/tsconfig.json",
     "build:watch": "tsc --p src/Backend/tsconfig.json --watch",
-    "serve": "npm run build:watch & npm run start"
+    "serve": "npm run build && npm run start"
   },
   "keywords": [],
   "author": "",
