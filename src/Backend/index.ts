@@ -54,6 +54,8 @@ app.post('/create', (req, res) => {
     });
 
     fs.writeFileSync('./data/clubs.json', JSON.stringify(clubData));
+
+    res.send('Success');
 });
 
 app.listen(port, () => {
