@@ -7,10 +7,9 @@ import { BACKEND_URL } from '../Utils/backend';
 
 export const ClubPage = () => {
     const { id } = useParams();
-    const [content, setContent] = useState('he');
+    const [content, setContent] = useState('Loading club info...');
 
-    const contentFrame = document.getElementById('frame') as HTMLIFrameElement;
-    // contentFrame.contentWindow!.document.write(content);
+    // TODO: is there a better way of displaying the content than in an iframe?
 
     useEffect(() => {
         const fetchContent = async () => {
