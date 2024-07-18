@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BACKEND_URL } from '../Utils/backend';
 
 interface ClubMetadata {
     name: string;
@@ -10,7 +11,7 @@ export const ClubsPreview = () => {
     const [data, setData] = useState<ClubMetadata[]>([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/clubs').then((res) => {
+        fetch(`${BACKEND_URL}/clubs`).then((res) => {
             if (res === undefined) {
                 throw new Error(`Received empty response`);
             }
