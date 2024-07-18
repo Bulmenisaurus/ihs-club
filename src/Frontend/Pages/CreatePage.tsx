@@ -1,4 +1,5 @@
 import React from 'react';
+import { BACKEND_URL } from '../Utils/backend';
 
 const submitClub = async () => {
     const clubNameInput = document.getElementById('club-name') as HTMLInputElement;
@@ -19,7 +20,7 @@ const submitClub = async () => {
     console.log({ fileText });
 
     // TODO: redirect user to club page immediately
-    fetch('http://localhost:3000/create', {
+    fetch(`${BACKEND_URL}/create`, {
         method: 'POST',
         body: JSON.stringify({ name: clubName, description: clubDescription, content: fileText }),
         headers: { 'Content-Type': 'application/json' },

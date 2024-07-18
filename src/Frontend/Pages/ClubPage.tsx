@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { BACKEND_URL } from '../Utils/backend';
 
 export const ClubPage = () => {
     const { id } = useParams();
@@ -10,7 +11,7 @@ export const ClubPage = () => {
 
     useEffect(() => {
         const fetchContent = async () => {
-            const clubContentRes = await fetch(`http://localhost:3000/club/${id}`);
+            const clubContentRes = await fetch(`${BACKEND_URL}/club/${id}`);
             const content = await clubContentRes.text();
             setContent(content);
         };
