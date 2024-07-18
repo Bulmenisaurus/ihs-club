@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
+import { NavBar } from '../Components/NavBar';
+
 import { BACKEND_URL } from '../Utils/backend';
 
 export const ClubPage = () => {
@@ -21,7 +24,10 @@ export const ClubPage = () => {
 
     return (
         <>
-            <iframe id='frame' srcDoc={content}></iframe>
+            <NavBar />
+            <main>
+                <iframe id='frame' srcDoc={content}></iframe>
+            </main>
         </>
     );
 };

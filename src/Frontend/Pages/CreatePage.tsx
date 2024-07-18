@@ -1,5 +1,6 @@
 import React from 'react';
 import { BACKEND_URL } from '../Utils/backend';
+import { NavBar } from '../Components/NavBar';
 
 const submitClub = async () => {
     const clubNameInput = document.getElementById('club-name') as HTMLInputElement;
@@ -30,7 +31,7 @@ const submitClub = async () => {
 export const CreatePage = () => {
     return (
         <>
-            <nav>Create</nav>
+            <NavBar />
             <main>
                 <label>
                     Name
