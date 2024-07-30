@@ -2,6 +2,7 @@
   "name": "ihs-club",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:client": "parcel ./src/Frontend/index.html",
@@ -15,6 +16,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@auth/core": "^0.34.2",
+    "@auth/express": "^0.6.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "react": "^18.3.1",

@@ -1,4 +1,5 @@
 import express, { json } from 'express';
+import { ExpressAuth } from '@auth/express';
 import * as fs from 'node:fs';
 import cors from 'cors';
 
@@ -7,6 +8,7 @@ const port = process.env.PORT || 3000;
 
 app.use(json());
 app.use(cors());
+app.use('/auth/*', ExpressAuth({ providers: [] }));
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
